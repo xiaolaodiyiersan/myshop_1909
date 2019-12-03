@@ -7,6 +7,14 @@
         <groupId>com.qf</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <dependencies>
+        <dependency>
+            <groupId>com.qf</groupId>
+            <artifactId>web_entity</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+
+        </dependency>
+    </dependencies>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>web_service_api</artifactId>

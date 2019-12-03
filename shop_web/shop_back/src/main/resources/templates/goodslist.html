@@ -32,11 +32,22 @@
                     <thead>
                     <tr>
                         <th><input class="check-all" type="checkbox" /></th>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                        <th>Column 3</th>
-                        <th>Column 4</th>
-                        <th>Column 5</th>
+                        <th>商品编号</th>
+                        <th>商品标题</th>
+                        <th>商品图片</th>
+                        <th>商品描述</th>
+                        <th>商品价格</th>
+                        <th>商品库存</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr th:each="good : ${goodslist}">
+                        <th><input class="check-all" type="checkbox" /></th>
+                        <th>商品编号</th>
+                        <th>商品标题</th>
+                        <th>商品描述</th>
+                        <th>商品价格</th>
+                        <th>商品库存</th>
+                        <th>操作</th>
                     </tr>
                     </thead>
                     <tfoot>
