@@ -17,6 +17,6 @@ import java.util.Date;
 public class BaseEntity implements Serializable {
     @TableId(type = IdType.AUTO)
     Integer id;
-    Date createDate = new Date();
+    Date createTime = new Date();
     Integer status = 1;
 }
