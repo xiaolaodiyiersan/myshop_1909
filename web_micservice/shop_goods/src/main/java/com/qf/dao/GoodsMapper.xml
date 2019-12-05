@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.GoodMapper">
+<resultMap id="MyResultMap" type="com.qf.entity.Goods">
+    <id column="id" property="id"/>
+    <result column="subject" property="subject"/>
+    <result column="info" property="info"/>
+    <result column="price" property="price"/>
+    <result column="save" property="save"/>
+    <result column="create_time" property="createTime"/>
+    <result column="status" property="status"/>
+    <result column="fmurl" property="fmurl"/>
+    <!--对多-->
+    <collection property="othersurl" ofType="String">
+        <result column="othersurl"/>
+    </collection>
+</resultMap>
+    <select id="Goodslist" resultMap="MyResultMap">
+SELECT   g.* , gi.url as 'othersurl' ,(select url from goods_images as gim where g.id = gim.gid and isfengmian = 1) as 'fmurl'
+  from goods g , goods_images gi where g.id = gi.gid and gi.isfengmian = 0
+    </select>
+</mapper>

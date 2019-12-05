@@ -66,7 +66,7 @@ try (
 @RequestMapping("insert")
     public String insert(Goods goods) {
         iGoodsService.insertGoods(goods);
-        return "redirect: goods/list";
+    return "redirect:/goods/list";
 }
 
 
